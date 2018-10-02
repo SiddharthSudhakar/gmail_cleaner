@@ -190,7 +190,7 @@ def run_lookup(driver, query, skip_first_mail):
     try:
         # Search Query
         # elem = driver.find_element_by_xpath("//input[@aria-label='Search']") # alternative code for the below line
-        elem = driver.wait.until(EC.presence_of_element_located((By.XPATH, "//input[@aria-label='Search']")))
+        elem = driver.wait.until(EC.presence_of_element_located((By.XPATH, "//input[@aria-label='Search mail']")))
         elem.send_keys(query["query_term"])
         elem.send_keys(Keys.RETURN)
         print("Search Query has been executed!")
