@@ -21,7 +21,7 @@ ypos = 0  # yposition of the click
 # Function that initializes the Chrome driver
 def init_driver():
     # setting up chromedriver
-    chromedriver = "/Users/admin/virtualenvs/gmail_cleaner/chromedriver"
+    chromedriver = "/home/siddharth/python_scripts/gmail_cleaner/chromedriver"
     os.environ["webdriver.chrome.driver"] = chromedriver
     driver = webdriver.Chrome(chromedriver)
     driver.wait = WebDriverWait(driver, 30)  # 20 seconds of polling for page wait
@@ -41,7 +41,7 @@ def set_preferences(driver):
     is_otp_enabled = (True if ansotp == 'Y' else False)  # if using OTP in account
 
     # tabs specifies the number of times delete action must be performed on each tab
-    tabs = {"Primary": 0, "Social": 1, "Promotions": 0, "Forums": 0}
+    tabs = {"Primary": 0, "Social": 1, "Promotions": 0, "Forums": 0, "Updates": 0}
 
     try:
         skip_first_mail = input("How many initial mail pages to skip?")
